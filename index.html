@@ -180,7 +180,10 @@ body[data-theme=winter] header{background:#0c222be8;border-color:#7fd9e55a}
 .eventtile.newyear .scene-art{filter:saturate(.92)}
 .eventtile.newyear:hover .scene-art,.eventtile.newyear:focus-visible .scene-art{transform:scale(1.09);filter:saturate(1.08)}
 .newyear-card-desc{max-width:490px;color:#d3eef0;line-height:1.75}
-.newyear-flag{position:absolute;z-index:3;top:18px;right:21px;color:#d3fffc;background:#113949dd;border:1px solid #8bf8ef85;border-radius:25px;padding:6px 11px;font-weight:800;font-size:10px;letter-spacing:1.8px;backdrop-filter:blur(8px)}
+.newyear-flag{position:absolute;z-index:3;top:18px;right:21px;display:flex;align-items:center;gap:7px;color:#d3fffc;background:#113949dd;border:1px solid #8bf8ef85;border-radius:25px;padding:6px 11px;font-weight:800;font-size:10px;letter-spacing:1.8px;backdrop-filter:blur(8px)}
+.newyear-flag-mark{display:grid;place-items:center;flex:0 0 21px;width:21px;height:21px;border-radius:50%;background:#b9fbfb;color:#0b3543;font-size:15px;line-height:1;font-weight:900;box-shadow:0 0 15px #8cf7f8a0;animation:ngFlagPulse 2.6s ease-in-out infinite}
+@keyframes ngFlagPulse{50%{box-shadow:0 0 22px #bfffffe6,0 0 0 4px #8cf7f81d}}
+@media(prefers-reduced-motion:reduce){.newyear-flag-mark{animation:none}}
 .eventdetail.newyear{--gold:#a2f2ef;--paper:#102631;background:linear-gradient(175deg,#071d29 0%,#0b2730 48%,#071923 100%);color:#e7f7f7}
 .eventdetail.newyear .eventbody{border-color:#a0e3ec62;background:linear-gradient(140deg,#143440,#102832 56%,#0b222d)}
 .eventdetail.newyear .eventbody h3{color:#b6f8f5}
@@ -456,7 +459,7 @@ body[data-theme=newyear] header{background:#0b2631e8;border-color:#9de8eb5a}
  <p class="newyear-card-desc">31 день волшебства: праздничные награды, редкие ресурсы и секретный подарок в финале декабря.</p>
  <div class="eventmeta"><span>01.12.2026 - 31.12.2026</span><span>Ежедневно в 00:00 МСК</span><span>Анонсирован</span></div>
  <span class="tile-cta">Подробнее →</span></div>
- <div class="newyear-flag">НОВЫЙ ИВЕНТ</div>
+ <div class="newyear-flag"><span class="newyear-flag-mark" aria-hidden="true">!</span>НОВЫЙ ИВЕНТ</div>
 </a>
 <a class="eventcard eventtile winter" href="#winter-nemine" aria-label="Открыть анонс Зима на nemine">
 <div class="scene-art" aria-hidden="true"><svg viewBox="0 0 1000 650" preserveAspectRatio="xMidYMid slice"><use href="#winterScene"></use></svg></div>
